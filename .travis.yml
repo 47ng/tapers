@@ -11,15 +11,20 @@ script:
 deploy:
   provider: npm
   email: accounts@francoisbest.com
+  api_key:
+    secure: kOvj+aR4wc0UiypFAPZFq2HQoHg2RREffhO0/JfHoV5u2xPw4fAMHJ2yNmUOcDgB2GQbCiQ9y5WvLo63M9GqSpK5COB6QhfC8j+XsgYQG9y1+lWgcxo53P8351xxwGT5nU/20NRhEiAShQ70OAiqGJl3XxcdfGIMtR+StYHqNDdtSLGdiXuffzPEoPl3gvIhZrPbbMZpGI/hEQejX4HzWZokL5QVaR78k1bLOagzpwEo34/toeuzXlmFAAPWVpAz7uTw1+I8bXJoqZ2hC8KYj2DXxObWXopvAExnC6PU/o2ubwH53CNSKyaLkW5J+4iUf5kjNTnS2BsBvxQFkKthst/T06gu/grGNDYNauVJ6siFlUqYS7wsBs5hoDWVv6yY9Se2MSNexHpW1BTWF5LeiiaCtEzft4KDjl0mlQFiXQBMfbgFWeyZ5/RdAAwA9w8698ktrBN6hKXKcFZLLMUsyZdKY0nnAkJhVIta7rQepE8q8BWKkOJ4YbniLte5nI2ubXIbyAJ0VT0fZGeICl2/DmkQQStvIrro/INyLFcHYJBzaRYmIt2xSELzmPvYWqq0v+2EHxYkKI7/0gloq9OuzpNSPk0K45XkrLYZ/wLMC9JFvvfeGy63ImTL6hmTyenozh06ydx1X5i7VYG/auRPKj9kHj4XfQGTil/FmCQg/lI=
   on:
     tags: true
   skip_cleanup: true
 
 notifications:
   slack:
+    rooms:
+      secure: BBD2pOe+WdOSIT+BoCMXvwHx8ve54q7oLvQt/o1xjisfd234rEDcIPL4x9jPgTDSL9mWroxr807GGtKWqMCcHxZMu20OeLUhx7OiVrV48pK6HkKhtjrZR+vWFgY5/kkS8fHdn0zpvdgKhWZxjyJvoskxg1cOrOB2ZyQ8LJ92TAB6yp42udED8fkU+0SCNkFMAurVHyJ//5seMi9iDFPbpZWUYGb5u4Gvd9yGex0nI/FBZAlc8I/mbh0gNWStLBHkjLtaZ7TavPckUX3jR7UjAjQxME0nczcDbM9qvmWDSMfnx6JqbXAUI710V/S9Wiin8blWyxzCHA7F6oXCSzdMSMt0WzuEVuNvAFxLZzbIXbkXzvxD3mBNcLGtWt+zlhyie/Fn9fci3x+H5Vqky3UMrdn1Gd0AccaeqZq5HOTJmGL103NQKSXhUgLpyPVLFsCz2SwysgP/fjP7HIpSxKJFWYyn5EThigvP+R9Nvveqj74uQ10DEZgNU9AaY3/IBZMM+cLiJWMXtzzr1pAbXsX64fr0rMqLZkWSurxPoj65OHCKrCJ+XNJSZYY5RO9Lw5NsPA53EG5G83EKJuBtljtmq2IPTuv9gcfbJ0byhaNAt94KHBE7k+7q+xGbOaeS8kGrAYojT6R/ZGlEftu7TiP/3brL1eBHIPshJ8bXW+P4qqg=
     on_success: always
     on_failure: always
     on_error: always
     template:
-      - 'Build %{result}: %{repository_slug}'
-      - 'Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) on %{branch} by %{author} %{result} in %{duration}'
+      - "Build %{result}: %{repository_slug}"
+      - Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) on %{branch}
+        by %{author} %{result} in %{duration}
