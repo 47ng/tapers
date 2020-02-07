@@ -9,6 +9,7 @@ script:
   - yarn ci
 
 deploy:
+  edge: true
   provider: npm
   email: accounts@francoisbest.com
   api_key:
@@ -25,6 +26,6 @@ notifications:
     on_failure: always
     on_error: always
     template:
-      - "Build %{result}: %{repository_slug}"
+      - 'Build %{result}: %{repository_slug}'
       - Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) on %{branch}
         by %{author} %{result} in %{duration}
