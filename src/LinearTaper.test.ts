@@ -28,4 +28,8 @@ describe('LinearTaper', () => {
     expect(taper.map(1)).toEqual(1)
     expect(taper.normalize(1)).toEqual(NaN)
   })
+  test('map & normalize', () => {
+    const taper = new LinearTaper(12, 3)
+    expect(taper.normalize(taper.map(0.3))).toBeCloseTo(0.3, 10)
+  })
 })
