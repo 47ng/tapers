@@ -9,6 +9,8 @@
 
 Map values between [0;1] to [X,Y] with various curves.
 
+Check out the [Demo website](https://tapers.47ng.com).
+
 ## Featured Tapers
 
 - [Linear](#linear-taper)

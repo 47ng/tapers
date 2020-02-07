@@ -1,0 +1,28 @@
+{
+  "name": "website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "deploy": "surge -p ./out -d https://tapers.47ng.com",
+    "release": "run-s build export deploy"
+  },
+  "dependencies": {
+    "@chakra-ui/core": "^0.5.2",
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
+    "@nivo/line": "^0.61.1",
+    "emotion-theming": "^10.0.27",
+    "next": "9.2.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "tapers": "../"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "surge": "^0.21.3"
+  }
+}
