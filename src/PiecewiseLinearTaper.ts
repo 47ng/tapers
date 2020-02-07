@@ -29,8 +29,4 @@ export default class PiecewiseLinearTaper {
     const taper = new LinearTaper(A, B)
     return taper.map(alpha)
   }
-
-  public normalize(y: number) {
-    return y // todo: Implement me.
-  }
 }
