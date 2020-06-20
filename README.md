@@ -75,4 +75,4 @@ See this taper in action on [Desmos](https://www.desmos.com/calculator/0jnlso1nw
 
 ## License
 
-[MIT](https://github.com/47ng/tapers/blob/master/LICENSE) - Made with ❤️ by [François Best](https://francoisbest.com).
+[MIT](https://github.com/47ng/tapers/blob/master/LICENSE) - Made with ❤️ by [François Best](https://francoisbest.com) - [Donations welcome](https://paypal.me/francoisbest?locale.x=fr_FR) 🙏
