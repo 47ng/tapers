@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Convert [0;1] values to [X;Y] with various curves",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "author": {
     "name": "François Best",
